@@ -1,4 +1,4 @@
-# Actividade - Tarefas programadas, tar e rsync
+# Actividade - Tarefas programadas e rsync
 
 ## Exercicio 1
 
