@@ -149,7 +149,9 @@ Crea unha tarefa programada a través do entorno gráfico para realizar as copia
 
 
 
+## Referencias
 
+* boxbot6. (25 Marzo, 2025). create-image-gallery-from-the-contents-of-a-website-folder. In *https://github.com/*. Retrieved 20:29, Sep 10, 2026, from [https://github.com/boxbot6/create-image-gallery-from-the-contents-of-a-website-folder](https://github.com/boxbot6/create-image-gallery-from-the-contents-of-a-website-folder)
 
 
 
