@@ -106,36 +106,46 @@ A copia ten que realizarse cada 5 días. Se pasados eses 5 días o equipo estaba
 
 ## Exercicio 10
 
-- [ ] Importa unha máquina virtual de tipo Debian Server e chámaa MaquinaA.
+- [ ] Importa a máquina virtual de tipo Debian Server chamada Máquina-A dende o cartafol do módulo.
 - [ ] Pon a máquina na mesma rede que o teu anfitrión para que se comuniquen (bridge).
 - [ ] Executa o comando rsync que sincronice todas as copias de seguridade que tes en /media/DIURNO no directorio /home/administrador/ da máquina virtual. 
 
 **PISTA**:
 
 ```bash 
-rsync -av --delete --progress CARTAFOL_ORIXE usuario@IPMaquinaA:CARTAFOL_DESTINO 
+rsync -av --delete --progress CARTAFOL_ORIXE usuario@IPMaquina-A:CARTAFOL_DESTINO 
 ```
 
 ## Exercicio 11
 
-- [ ] Importa outra máquina virtual de tipo Ubuntu Server chámaa MaquinaB.
-- [ ] Pon esta máquina na mesma rede que MáquinaA para que se comuniquen (bridge).
+- [ ] Importa unha máquina virtual de tipo Ubuntu Server 24.04 e chámaa Máquina-B.
+- [ ] Pon esta máquina na mesma rede que Máquina-A para que se comuniquen (bridge).
 - [ ] Crea o directorio /copias (*mkdir*) e fai que o propietario sexa o usuario local chamado administrador sexa o propietario desta carpeta (*chown*) 
-- [ ] Fai segura a máquina virtual Maquina B facendo que o súa tarxteta de rede esta caído (DOWN) permanentemente. Mediante unha única tarefa programada na **MaquinaB** terás que: 
+- [ ] Fai segura a máquina virtual Máquina-B facendo que o súa tarxteta de rede esta caído (DOWN) permanentemente. Mediante unha única tarefa programada na **Máquina-B** terás que: 
   - [ ] Levantar a tarxeta de rede (UP).  Investiga o comando *ip link* 
   - [ ] Facer que colla unha IP do servidor dhcp. Investiga o comando *dhclient*.
   - [ ] Realizar rsync  que copie o que está en /home/administrador da máquina A ao directorio /copias.
   - [ ] Tumbar a tarxeta de rede (DOWN).  Investiga o comando *ip link*.
 
-
-
 ## Exercicio 12
 
-Dende o teu equipo en Windows repite o exercicio 2 co comando robocopy.
+- [ ] Analiza o contido que hai no directorio /var/www/html da MáquinaA.
+- [ ] Accede ao navegador e pon a IP da MáquinaA. Que ves?
+
+Imos supoñer que queremos **migrar** a sinxela aplicación Web da Máquina-A á Máquina-B. 
+
+- [ ] Instala o servidor web apache na Máquina-B.
+- [ ] Leva con rsync o contido da aplicación web dende a Máquina-B.
+- [ ] Obtén unha captura de pantalla onde se vexan dúas ventás de navegador. Na ventá da esquerda debe mostrar o contido da aplicación web albergada na Máquina-A. Na ventá da dereita debe mostrarse a aplicación web albergada na Máquina-B. Na captura debe verse as URL dos dous navegadores.
+- [ ] Avisa ao profesor cando o teñas feito. 
 
 ## Exercicio 13
 
-Crea unha tarefa programada a través do entorno gráfico para realizar as copias do directorio Users\teulogin en DIURNO.
+Dende o teu equipo en Windows repite o exercicio 2 co comando robocopy pero do directorio C:\Users
+
+## Exercicio 14
+
+Crea unha tarefa programada a través do entorno gráfico para realizar as copias do directorio Users\teulogin en DIURNO. A tarefa ténse que executar todos os días ás 10:00.
 
 
 

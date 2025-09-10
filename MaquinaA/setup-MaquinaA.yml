@@ -1,0 +1,27 @@
+---
+- name: Configurar Maquina A
+  hosts: MaquinaA
+  tasks:
+    - name: Establecer hostname a "MaquinaA"
+      ansible.builtin.hostname:
+        name: "MaquinaA"
+
+    - name: Actualizar /etc/hosts con el nuevo hostname
+      ansible.builtin.lineinfile:
+        path: /etc/hosts
+        regexp: '127\.0\.1\.1'
+        line: '127.0.1.1   MaquinaA'
+        state: present
+    - name: Instalar paquetes necesarios
+      ansible.builtin.apt:
+        name:
+          - apache2
+          - vim
+    - name: Copia un directorio 
+      ansible.builtin.copy:
+        src: ./web/
+        dest: /var/www/html/
+        owner: www-data
+        group: www-data
+        mode: '0755'
+
