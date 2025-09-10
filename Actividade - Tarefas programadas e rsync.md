@@ -129,8 +129,8 @@ rsync -av --delete --progress CARTAFOL_ORIXE usuario@IPMaquina-A:CARTAFOL_DESTIN
 
 ## Exercicio 12
 
-- [ ] Analiza o contido que hai no directorio /var/www/html da MáquinaA.
-- [ ] Accede ao navegador e pon a IP da MáquinaA. Que ves?
+- [ ] Analiza o contido que hai no directorio /var/www/html da Máquina-A.
+- [ ] Accede ao navegador e pon a IP da Máquina-A. Que ves?
 
 Imos supoñer que queremos **migrar** a sinxela aplicación Web da Máquina-A á Máquina-B. 
 
